@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', 'master', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'master', 'footer', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -36,6 +36,26 @@
 
     <br class='clear' />
 
+    <div class="container">
+
     <%= yield %>
+
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+          </div>
+
+          <div class="col-6 footer-blurb">
+            Proudly hacked by <a href="https://sam-cunningham.netlify.com">[Sam Cunningham]</a><br />
+            Want to build your own Splurty Web App - <a href="https://online.bootcampspot.com">Learn how to code here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
